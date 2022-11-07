@@ -1,14 +1,17 @@
 # Projeto: Dungeons&Dragons
 
-A ideia do projeto é criar um site que possua todas as etapas de criar uma ficha para jogar Dungeons and Dragons 5e. O site deve ser responsivo sem perder suas características além de conseguir trabalhar com as múltiplas variáveis que existe dentro do jogo de maneira simples. O projeto está sendo feito usando HTML, CSS e JS. Apenas as imagens não são de autoria minha, são do próprio site da Wizard's of the Coast.
+A ideia do projeto é criar um site que possua todas as etapas de criar uma ficha para jogar Dungeons and Dragons 5e. O site deve ser responsivo sem perder suas características além de conseguir trabalhar com as múltiplas variáveis que existe dentro do jogo de maneira simples, para isso estou usando o <strong>localStorage<strong> pois ainda não aprendi a usar banco de dados.
+  
+O projeto está sendo feito usando <strong>HTML, CSS e JS</strong>. Apenas as imagens não são de autoria minha, são do próprio site da Wizard's of the Coast.
 
 ### Telas do site:
-
-[x] Login;
-[x] Compra de Atirbutos;
-[x] Escolha de raça;
-[ ] Escolha de classe;
-[ ] Ficha completa;
+<ul>
+  <li>[x] Login;</li>
+  <li>[x] Compra de Atirbutos;</li>
+  <li>[x] Escolha de raça;</li>
+  <li>[ ] Escolha de classe;</li>
+  <li>[ ] Ficha completa;</li>
+ </ul>
 
 ### Estagio do projeto:
 
