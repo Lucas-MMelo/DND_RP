@@ -2,7 +2,7 @@
 
 A ideia do projeto é criar um site que possua todas as etapas de criar uma ficha para jogar Dungeons and Dragons 5e. O site deve ser responsivo sem perder suas características além de conseguir trabalhar com as múltiplas variáveis que existe dentro do jogo de maneira simples, para isso estou usando o <strong>localStorage<strong> pois ainda não aprendi a usar banco de dados.
   
-O projeto está sendo feito usando <strong>HTML, CSS e JS</strong>. Apenas as imagens não são de autoria minha, são do próprio site da Wizard's of the Coast.
+O projeto está sendo feito usando <strong> HTML, CSS e JS </strong>. Apenas as imagens não são de autoria minha, são do próprio site da Wizard's of the Coast.
 
 ### Telas do site:
 <ul>
