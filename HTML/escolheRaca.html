@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ASSETS/ICONES/dungeons-and-dragons-icon.ico" type="image/x-icon">
+    <title>DragonCard</title> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../CSS/01_fonts.css">
+    <link rel="stylesheet" href="../CSS/escolheRaca.css">
+    
+
+</head>
+<body>
+
+<header class="d-flex">
+    <div class="logo">
+        <img class="icon" src="../ASSETS/ICONES/dungeons-and-dragons.png" onclick="backHome()">
+        <div class="login">
+            <h3>Dragon Card</h3>
+            <div class="loguinPlayer">
+                <i class="gg-user"  id="loguinPlayer"></i>
+                <h4 class="TitlePlayer" id="ID_TitlePlayer"></h4> 
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="d-flex">
+            <input type="button" class="button_red" value="log out" onclick="showModal_logOut()">
+
+            <div class="sm_button_green" id="salvarFicha" onclick="salvarFicha()">
+                <img class="icon" src="../ASSETS/ICONES/salvar.png"/>
+            </div>
+    </nav>
+
+</header>
+
+<main>
+
+    <div class="ficha">
+        <div class="form">
+            <p>Nome: <span class="destaque" id="ID_nameChar"></span> | </span></p>
+            <p>Idade:<span class="destaque" id="ID_idadeChar"></span> | </p>
+            <p>Altura: <span class="destaque" id="ID_alturaChar"></span> | </p>
+            <p>Peso: <span class="destaque" id="ID_pesoChar"></span> | </p>
+            <p>Pele: <span class="destaque" id="ID_peleChar"></span> | </p>
+            <p>Olho: <span class="destaque" id="ID_olhoChar"></span> | </p>
+            <p>Cabelo: <span class="destaque" id="ID_cabeloChar"></span>
+        </div>
+
+        <table class="atributos">
+            <thead>
+                <tr>
+                    <th colspan="2">FOR</th>
+                    <th colspan="2">DES</th>
+                    <th colspan="2">CON</th>
+                    <th colspan="2">INT</th>
+                    <th colspan="2">SAB</th>
+                    <th colspan="2">CAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="buttons">
+                    <td>
+                        <div class="sm_button_red" id="moreFOR" onclick="moreFOR()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_up.png">
+                        </div>                    
+                    </td>
+                    <td>
+                        <div class="sm_button_red" id="lessFOR" onclick="lessFOR()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_down.png">
+                        </div>                    
+                    </td>
+
+                    <td>
+                        <div class="sm_button_red" id="moreDES" onclick="moreDES()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_up.png">
+                        </div>                    
+                    </td>
+                    <td>
+                        <div class="sm_button_red" id="lessDES" onclick="lessDES()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_down.png">
+                        </div>                    
+                    </td>
+
+                    <td>
+                        <div class="sm_button_red" id="moreCON" onclick="moreCON()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_up.png">
+                        </div>                    
+                    </td>
+                    <td>
+                        <div class="sm_button_red" id="lessCON" onclick="lessCON()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_down.png">
+                        </div>                    
+                    </td>
+
+                    <td>
+                        <div class="sm_button_red" id="moreINT" onclick="moreINT()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_up.png">
+                        </div>                    
+                    </td>
+                    <td>
+                        <div class="sm_button_red" id="lessINT" onclick="lessINT()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_down.png">
+                        </div>                    
+                    </td>
+
+                    <td>
+                        <div class="sm_button_red" id="moreSAB" onclick="moreSAB()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_up.png">
+                        </div>                    
+                    </td>
+                    <td>
+                        <div class="sm_button_red" id="lessSAB" onclick="lessSAB()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_down.png">
+                        </div>                    
+                    </td>
+
+                    <td>
+                        <div class="sm_button_red" id="moreCAR" onclick="moreCAR()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_up.png">
+                        </div>                    
+                    </td>
+                    <td>
+                        <div class="sm_button_red" id="lessCAR" onclick="lessCAR()">
+                            <img  class="icon" src="../ASSETS/ICONES/arrow_down.png">
+                        </div>                    
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="ID_FOR"></td>
+                    <td colspan="2" id="ID_DES"></td>
+                    <td colspan="2" id="ID_CON"></td>
+                    <td colspan="2" id="ID_INT"></td>
+                    <td colspan="2" id="ID_SAB"></td>
+                    <td colspan="2" id="ID_CAR"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="container">
+
+        <div class="d-flex justify-content-start">
+            <input id="ID_Traços" class="aba abaSelecionada" type="button" value="Traços">
+            <input id="ID_Historia" class="aba" type="button" value="História">
+            <input id="ID_Imagem" class="aba" type="button" value="Imagem">
+        </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 menu">
+
+            <div class="help" onclick="showModal_help()">
+                <img class="icon" src="../ASSETS/ICONES/help.png"/>
+            </div>
+
+            <h2 id="nameRaça"></h2>
+            
+            <div id="escreveRaça" class="principalRaca">
+                
+            </div>
+            
+        </div>
+        <div class="col-12 col-md-6 menu">
+
+                <h2>Lista de Raças</h2>
+                <table class="raças">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tamanho</th>
+                            <th>Origem</th>
+                        </tr>
+                    </thead>
+                    <tbody>    
+                        <tr onclick="Escreve_Aarakocra()">
+                            <td id="0_nomeRaça"></td>
+                            <td id="0_tamanhoRaça"></td>
+                            <td id="0_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Aasimar()">
+                            <td id="1_nomeRaça"></td>
+                            <td id="1_tamanhoRaça"></td>
+                            <td id="1_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_AstralElf()">
+                            <td id="2_nomeRaça"></td>
+                            <td id="2_tamanhoRaça"></td>
+                            <td id="2_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Autominominomo()">
+                            <td id="3_nomeRaça"></td>
+                            <td id="3_tamanhoRaça"></td>
+                            <td id="3_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Bugbear()">
+                            <td id="4_nomeRaça"></td>
+                            <td id="4_tamanhoRaça"></td>
+                            <td id="4_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Centauro()">
+                            <td id="5_nomeRaça"></td>
+                            <td id="5_tamanhoRaça"></td>
+                            <td id="5_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Changeling()">
+                            <td id="6_nomeRaça"></td>
+                            <td id="6_tamanhoRaça"></td>
+                            <td id="6_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Dhampir()">
+                            <td id="7_nomeRaça"></td>
+                            <td id="7_tamanhoRaça"></td>
+                            <td id="7_livroRaça"></td>
+                        </tr>
+                        <tr onclick="Escreve_Dragonborn()">
+                            <td id="8_nomeRaça"></td>
+                            <td id="8_tamanhoRaça"></td>
+                            <td id="8_livroRaça"></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+
+
+</main>
+
+<div class="modal" id="modal_ajuda">
+    <div class="menu_ajuda">
+        <div class="title">
+            <h2> Comprando os Atributos:</h2> 
+            <span class="exite" id="closeloguin" onclick="hiddeModal_help()">&times;</span>
+        </div>
+        <p>O método descrito aqui permite que você crie um personagem com um conjunto de valores de habilidade escolhido individualmente.</p>
+
+        <p>Você tem 27 pontos para gastar em seus valores de habilidade. O custo de cada valor de habilidade é mostrado na tabela Custo de Pontos de Habilidades. Por exemplo, um valor 14 custa 7 pontos. Usando este método, 15 será o valor de habilidade mais alto que você pode conseguir inicialmente, antes de aplicar as melhorias raciais. Você não pode ter uma habilidade menor que 8.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal_yesNo">
+    <div class="menu">
+        <div class="title">
+            <h3 id="msg"></h3>
+        </div>
+        <div id="escolha" class="center">
+        <input type="button" class="button_white" value="Sim" id="yes">
+        <input type="button" class="button_white" value="Não" id="no">
+        </div>
+    </div>
+</div>
+
+<p id="teste"></p>
+
+<footer>
+    <p>Projeto desenvolvido por Lucas Melo.</p>
+    <input type="button" class="button_white" value="Créditos" id="creditos">
+</footer>
+
+<script src="../JS/escolheRaca.js"></script>
+
+</body>
+</html>

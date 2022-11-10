@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'CopperPlate';
+    src: url('../ASSETS/FONTS/CopperplateGothicBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+Tipos de Fontes:
+- opentype (otf)
+- truetype (ttf)
+- enbedded-opentype
+- truetype-aat (appel advanced Typography)
+- svg
+/*

@@ -1,0 +1,387 @@
+/* --- https://css.gg/app --- */
+
+@import url('https://css.gg/user.css');
+@import url('https://css.gg/trash.css');
+@import url('https://css.gg/more-o.css');
+@import url('https://css.gg/attachment.css');
+@import url('https://css.gg/play-button-r.css');
+
+/* -------------------------- */
+/* ---------- Body ---------- */
+
+body {
+    background-image: url('../ASSETS/IMAGENS/CandlekeepMysteries_1920x1080_Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+body p {
+    font-family: 'Trebuchet MS';
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+body h1 {
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 30px;
+    margin: 0;
+}
+
+body h2,
+body h3 {
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 16px;
+    margin: 0;
+}
+
+body h4 {
+    color: rgb(229, 57, 53);
+    font-family: 'CopperPlate';
+    font-size: 12px;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+/* -------------------------- */
+/* ------ Header/Footer ----- */
+
+header,
+footer {
+    background-color: rgb(31, 31, 31);
+    padding: 6px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+font-size: 10px;
+margin: 0;
+}
+
+footer.button_white {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0;
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+    font-size: 8px;
+}
+
+header .icon {
+    max-width: 40px;
+}
+
+main .icon {
+    max-width: 20px;
+}
+
+header h3 {
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 16px;
+    margin: 0;
+    margin-left: 12px;
+}
+
+header h4 {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 12px;
+    margin: 0;
+    margin-left: 8px;
+}
+
+.loguinPlayer {
+    background-color: black;
+    color: rgb(229, 57, 53);
+    padding: 4px;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 12px;
+}
+
+nav,
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------------- */
+/* --------- Botões --------- */
+
+.button_red {
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: rgb(229, 57, 53);
+    border:solid 1px rgb(124, 18, 16);
+    border-radius: 10px 5%;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: 4px 4px 4px black;
+
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.button_white {
+    background-color: white;
+    border: solid 1px rgb(62, 62, 62);
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: 4px 4px 4px rgba(31, 31, 31, 0.8);
+
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+    font-size: 10px;
+}
+
+.sm_button_blue,
+.sm_button_green,
+.sm_button_red,
+.sm_button_yellow {
+    display: flex;
+    border: solid 1px white;
+    margin-left: 4px;
+    padding: 6px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    align-items: center;
+    max-height: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+td .sm_button_blue,
+td .sm_button_green,
+td .sm_button_red,
+td .sm_button_yellow {
+    min-height: 15px;
+    min-width: 15x;
+    margin: 0;
+}
+
+td .icon {
+    max-width: 15px;
+}
+
+.sm_button_red {
+    background-color: rgb(229, 57, 53);
+}
+
+.sm_button_blue {
+    background-color: rgb(53, 173, 229); 
+}
+
+.sm_button_green {
+    background-color: rgb(53, 229, 161); 
+}
+
+.sm_button_yellow {
+    background-color: rgb(229, 159, 53); 
+}
+
+.sm_button_blue:hover,
+.sm_button_green:hover,
+.sm_button_red:hover,
+.sm_button_yellow:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+.button_white:hover,
+.button_red:hover,
+.exite:hover {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    transition: 0.5s;
+}
+
+/* -------------------------- */
+/* ---------- Modal --------- */
+
+.modal {
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+    
+    opacity: 0;
+    visibility: hidden;
+    transition:visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+    
+.modalOn {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+.menu_modal {
+    background-color: rgb(31, 31, 31);
+    padding: 12px;
+    border: solid 1px rgb(229, 57, 53);
+    border-radius: 6px;
+}
+
+.numberPlace {
+    max-width: 60px;
+    margin: 0 auto;
+}
+
+.title {
+    background-color: rgb(229, 57, 53);
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title h2 {
+    margin: 0;
+    text-indent: 12px;
+}
+
+.menu_save {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.exite {
+    margin: 0;
+    float: left;
+    color: rgb(31, 31, 31);
+    background-color: white;
+    border: solid 1px rgb(31, 31, 31);
+    line-height: 18px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0px 4px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+table.personagens {
+    margin: 12px;
+    font-family: 'CopperPlate';
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-bottom:solid 2px rgba(0, 0, 0, 0.2);
+    border-top:solid 2px rgba(0, 0, 0, 0.2);
+}
+
+.personagens th {
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding: 6px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.personagens td {
+    font-size: 12px;
+    text-align: center;
+    color: rgb(229, 57, 53);
+    padding: 6px;
+    cursor: pointer;
+}
+
+.personagens td.preenchido {
+    color: rgb(229, 159, 53);
+}
+
+.personagens td.edit {
+    background-color: white;
+    border: solid 1px rgb(62, 62, 62);
+    border-radius: 5px;
+    color: rgb(31, 31, 31);
+    margin: 0;
+}
+
+.personagens td.del:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.personagens td.edit:hover {
+background-color: rgb(31, 31, 31);
+color: white;
+transition: 0.5s;
+}
+
+.personagens tr:hover {
+    background-color: rgb(62, 62, 62);
+    transition: 0.5s;
+}
+
+
+/* -------------------------- */
+/* ---------- Extra --------- */
+
+i.gg-user {
+    color: rgb(31, 31, 31);
+    margin-left: 4px;
+}
+
+i.On {
+    color: rgb(229, 57, 53);
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.text {
+    background-color: rgba(31, 31, 31, 0.8);
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+/* -------------------------- */
+/* ------- Responsivo ------- */
+
+@media (max-width: 500px) {
+    .text {
+        margin-right: 0;
+        margin: 12px auto;
+    }
+
+    div.login h3 {
+        display: none;
+    }
+
+    footer {
+        text-align: left;
+        padding-left: 24px ;
+    }
+}
+
+/* -------------------------- */

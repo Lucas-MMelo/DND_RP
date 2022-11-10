@@ -1,0 +1,557 @@
+/* --- https://css.gg/app --- */
+
+@import url('https://css.gg/user.css');
+@import url('https://css.gg/trash.css');
+@import url('https://css.gg/more-o.css');
+@import url('https://css.gg/attachment.css');
+@import url('https://css.gg/play-button-r.css');
+
+/* -------------------------- */
+/* ---------- Body ---------- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url('../ASSETS/IMAGENS/loyal-warhound_afr_1920x1080_wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg_white {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.bg_white:first-child {
+    padding-top: 0px;
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+body p {
+    font-family: 'Trebuchet MS';
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+body h1 {
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 30px;
+    margin: 0;
+}
+
+body h2 {
+    color: rgb(229, 57, 53);
+    font-family: 'CopperPlate';
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+}
+
+body h3 {
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.modal h3 {
+    margin-bottom: 0px;
+}
+
+body h4 {
+    color: rgb(229, 57, 53);
+    font-family: 'CopperPlate';
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+/* -------------------------- */
+/* ------ Header/Footer ----- */
+
+header,
+footer {
+    background-color: rgb(31, 31, 31);
+    padding: 6px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+font-size: 10px;
+margin: 0;
+}
+
+footer.button_white {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0;
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+    font-size: 8px;
+}
+
+header .icon {
+    max-width: 40px;
+}
+
+main .icon {
+    max-width: 20px;
+}
+
+header h3 {
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 16px;
+    margin: 0;
+    margin-left: 12px;
+}
+
+header h4 {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'CopperPlate';
+    font-size: 12px;
+    margin: 0;
+    margin-left: 8px;
+}
+
+.loguinPlayer {
+    background-color: black;
+    color: rgb(229, 57, 53);
+    padding: 4px;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 12px;
+}
+
+nav,
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------------- */
+/* --------- Botões --------- */
+
+.button_red {
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: rgb(229, 57, 53);
+    border:solid 1px rgb(124, 18, 16);
+    border-radius: 10px 5%;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: 4px 4px 4px black;
+
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.button_white {
+    background-color: white;
+    border: solid 1px rgb(62, 62, 62);
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: 4px 4px 4px rgba(31, 31, 31, 0.8);
+
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+    font-size: 10px;
+}
+
+.sm_button_blue,
+.sm_button_green,
+.sm_button_red,
+.sm_button_yellow {
+    display: flex;
+    border: solid 1px white;
+    margin-left: 4px;
+    padding: 6px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    align-items: center;
+    max-height: 40px;
+    box-shadow: 4px 4px 4px rgba(31, 31, 31, 0.8);
+    cursor: pointer;
+    max-width: max-content;
+}
+
+td .sm_button_blue,
+td .sm_button_green,
+td .sm_button_red,
+td .sm_button_yellow {
+    min-height: 15px;
+    min-width: 15x;
+    margin: 0;
+}
+
+td .icon {
+    max-width: 10px;
+}
+
+nav .icon {
+    max-width: 15px;
+}
+
+.sm_button_red {
+    background-color: rgb(229, 57, 53);
+}
+
+.sm_button_blue {
+    background-color: rgb(53, 173, 229); 
+}
+
+.sm_button_green {
+    background-color: rgb(53, 229, 161); 
+}
+
+.sm_button_yellow {
+    background-color: rgb(229, 159, 53); 
+}
+
+.sm_button_blue:hover,
+.sm_button_green:hover,
+.sm_button_red:hover,
+.sm_button_yellow:hover,
+.help:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+.button_white:hover,
+.button_red:hover,
+.exite:hover {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    transition: 0.5s;
+}
+
+/* -------------------------- */
+/* ---------- Modal --------- */
+
+.modal {
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+    
+    opacity: 0;
+    visibility: hidden;
+    transition:visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+    
+.modalOn {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+.menu_modal {
+    background-color: rgb(31, 31, 31);
+    padding: 12px;
+    border: solid 1px rgb(229, 57, 53);
+    border-radius: 6px;
+}
+
+.menu_ajuda {
+    margin: 20%;
+    background-color: rgb(27, 90, 119);
+    padding: 12px;
+    border: solid 1px white;
+    border-radius: 6px;
+}
+
+.menu_modal p,
+.menu_ajuda p {
+margin-bottom: 6px;
+}
+
+.menu_modal h2,
+.menu_ajuda h2 {
+    color: white;
+}
+
+.numberPlace {
+    max-width: 60px;
+    margin: 0 auto;
+}
+
+.title {
+    background-color: rgb(229, 57, 53);
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title h2 {
+    margin: 0;
+    text-indent: 12px;
+}
+
+.menu_save {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.exite {
+    margin: 0;
+    float: left;
+    color: rgb(31, 31, 31);
+    background-color: white;
+    border: solid 1px rgb(31, 31, 31);
+    line-height: 18px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0px 4px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.help {
+    margin: 0;
+    float: left;
+    color: rgb(31, 31, 31);
+    background-color: rgb(53, 173, 229);
+    border: solid 1px rgb(31, 31, 31);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    line-height: 18px;
+    font-size: 14px;
+    margin: 0;
+    padding: 4px 4px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+/* -------------------------- */
+/* ------- Calculadora ------ */
+
+.calculo {
+    background-color: rgb(27, 90, 119);
+    width: fit-content;
+    padding: 12px;
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: solid 2px white;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+
+.calculo h2 {
+    color:  white;
+}
+
+.calculo:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+table.calculadora {
+    margin: 0 auto;
+    margin-bottom: 12px;
+    font-family: 'CopperPlate';
+    background-color: rgba(31, 31, 31, 0.8);
+    border-radius: 5px;
+}
+
+.calculadora th {
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding: 6px;
+    text-transform: uppercase;
+    color: rgb(229, 159, 53);
+    font-size: 10px;
+    text-align: center;
+    border-bottom: solid 1px white;
+}
+
+.calculadora td {
+    border-bottom:solid 1px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.calculadora td .max {
+    color: rgb(229, 159, 53);
+    font-size: 20px;
+}
+
+
+/* -------------------------- */
+/* ---------- Extra --------- */
+
+abbr[title] {
+    text-decoration: none;
+}
+
+i.gg-user {
+    color: rgb(31, 31, 31);
+    margin-left: 4px;
+}
+
+i.On {
+    color: rgb(229, 57, 53);
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    margin: 0;
+}
+
+.center_dois {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    border-radius: 10px;
+    margin-bottom: 12px;
+    margin-top: 12px;    
+}
+
+.text h3 {
+color: rgb(124, 18, 16);
+}
+
+.text p {
+    color: rgb(62, 62, 62);
+}
+
+span.destaque {
+    color: rgb(124, 18, 16);
+    font-family: 'CopperPlate';
+    font-size: 14px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------- */
+/* ---------- Ficha --------- */
+
+.ficha {
+    background-color: white;
+    padding: 12px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.ficha div {
+    flex-wrap: wrap;
+}
+
+.ficha h2 {
+    color: rgb(229, 57, 53);
+}
+
+.ficha p {
+    color: rgb(31, 31, 31);
+    font-size: 10px;
+}
+
+
+
+/* -------------------------- */
+/* ------- Responsivo ------- */
+
+@media (max-width: 500px) {
+    .text {
+        margin-right: 0;
+        margin: 12px auto;
+    }
+
+    div.login h3 {
+        display: none;
+    }
+
+    footer {
+        text-align: left;
+        padding-left: 24px ;
+    }
+
+    .center_dois {
+        display: flex;
+        justify-content: none;
+    }
+
+    .sectionAtribute .sm_button_yellow {
+        margin: 0;
+    }
+
+    .menu_modal {
+        margin-left: 6px;
+        margin-right: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .col-12 {
+        flex: inherit;
+    }
+
+    .bg_white {
+        margin-left: 6px;
+        margin-right: 6px;       
+    }
+
+    .container {
+        width: inherit;
+    }
+
+    .ficha {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
+
+/* -------------------------- */

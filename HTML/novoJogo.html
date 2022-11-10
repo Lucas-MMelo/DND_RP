@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ASSETS/ICONES/dungeons-and-dragons-icon.ico" type="image/x-icon">
+    <title>DragonCard</title> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="../CSS/01_fonts.css">
+    <link rel="stylesheet" href="../CSS/novoJogo.css">
+    
+
+</head>
+<body id="corpo">
+
+<header class="d-flex">
+    <div class="logo">
+        <img class="icon" src="../ASSETS/ICONES/dungeons-and-dragons.png" onclick="backhome()">
+        <div class="login">
+            <h3>Dragon Card</h3>
+            <div class="loguinPlayer">
+                <i class="gg-user"  id="loguinPlayer"></i>
+                <h4 class="TitlePlayer" id="ID_TitlePlayer"></h4> 
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="d-flex">
+        <input type="button" class="button_red" value="Loguin" onclick="showModal_loguin()">
+        <input type="button" class="button_red" value="Personagens" onclick="showModal_personagens()">
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <div class="row">
+        <div class="col-sm-6 col-12">
+            <div class="text">
+                <h3>O que temos?</h3>
+
+                <p>Esse site é sobre a criação de personagens,
+                fornecendo as regras e diretrizes que você precisa para
+                fazer o personagem que você irá jogar. Inclui informações
+                sobre várias raças, classes, antecedentes, equipamentos e
+                outras opções para personalização que você pode escolher.
+                Muitas das regras da parte 1 dependem da parte 2 e 3. Se
+                você encontrar algum conceito do jogo na parte 1 que você
+                não entender, consulte o índice do livro.</p>
+            </div>
+
+            <div class="text">
+                <h2>Use as novas<br>regras de Tasha!</h2>
+                <a href="https://5e.tools/book.html#tce"><input type="button" class="button_white" id="saibaMais" value="Saiba mais aqui!"></a>
+            </div>
+        </div>
+        <div class="col">            
+        </div>
+    </div>
+    
+
+    <div class="modal" id="modal_loguin">
+        <div class="menu_modal">
+            <div class="title">
+                <h2>Loguin</h2>
+                <span class="exite" id="closeloguin" onclick="hiddeModal_loguin()">&times;</span>
+            </div>
+            <p>Coloque o seu nome:</p>
+            <input type="text" id="ID_namePlayer">
+            <div class="menu_save">
+                <input type="button" value="salvar"  class="button_red" onclick="hiddeModal_loguin(), saveName()">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_personagens">
+        <div class="menu_modal">
+            <div class="title">
+                <h2>Personagens</h2>
+                <span class="exite" id="closeloguin" onclick="hiddeModal_personagens()">&times;</span>
+            </div>
+
+            <table class="personagens">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nível</th>
+                        <th>Classe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="ID_nameChar_01"></td>
+                        <td id="ID_nivelChar_01"></td>
+                        <td id="ID_classeChar_01"></td>
+                        <td id="del_01" onclick="showModal_del()">
+                            <div class="sm_button_red">
+                                <img class="icon" src="../ASSETS/ICONES/lixo.png"/>
+                            </div>
+                        </td>
+                        <td id="slot01" onclick="showModal_edit()">
+                            <div class="sm_button_blue">
+                                <img class="icon" src="../ASSETS/ICONES/editar.png"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="ID_nameChar_02"></td>
+                        <td id="ID_nivelChar_02"></td>
+                        <td id="ID_classeChar_02"></td>
+                        <td id="del_02" onclick="showModal_del()">
+                            <div class="sm_button_red">
+                                <img class="icon" src="../ASSETS/ICONES/lixo.png"/>
+                            </div>
+                        </td>
+                        <td id="slot02" onclick="showModal_edit()">
+                            <div class="sm_button_blue">
+                                <img class="icon" src="../ASSETS/ICONES/editar.png"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="ID_nameChar_03"></td>
+                        <td id="ID_nivelChar_03"></td>
+                        <td id="ID_classeChar_03"></td>
+                        <td id="del_03" onclick="showModal_del()">
+                            <div class="sm_button_red">
+                                <img class="icon" src="../ASSETS/ICONES/lixo.png"/>
+                            </div>
+                        </td>
+                        <td id="slot03" onclick="showModal_edit()">
+                            <div class="sm_button_blue">
+                                <img class="icon" src="../ASSETS/ICONES/editar.png"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="ID_nameChar_04"></td>
+                        <td id="ID_nivelChar_04"></td>
+                        <td id="ID_classeChar_04"></td>
+                        <td id="del_04" onclick="showModal_del()">
+                            <div class="sm_button_red">
+                                <img class="icon" src="../ASSETS/ICONES/lixo.png"/>
+                            </div>
+                        </td>
+                        <td id="slot04" onclick="showModal_edit()">
+                            <div class="sm_button_blue">
+                                <img class="icon" src="../ASSETS/ICONES/editar.png"/>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal_yesNo">
+        <div class="menu_modal">
+            <div class="title">
+                <h3 id="msg"></h3>
+            </div>
+            <div class="center">
+            <input type="button" class="button_white" value="Sim" id="yes">
+            <input type="button" class="button_white" value="Não" id="no">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_edit">
+        <div class="menu_modal">
+            <div class="title">
+                <h2 id="title_FichaEdit"></h2>
+                <span class="exite" id="closeloguin" onclick="hiddeModal_edit()">&times;</span>
+            </div>
+            <p>Nome:</p>
+            <input type="text" id="ID_nameChar">
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-3">
+                        <p>Idade:</p>
+                        <input class="numberPlace" type="number" id="ID_idadeChar">
+                        <p>Altura:</p>
+                        <input class="numberPlace" type="number" id="ID_alturaChar">
+                        <p>Peso:</p>
+                        <input class="numberPlace" type="number" id="ID_pesoChar"> 
+                    </div>
+                    <div class="col-9">
+                        <p>Cor da pele:</p>
+                        <input type="text" id="ID_peleChar">
+                        <p>Cor dos olhos:</p>
+                        <input type="text" id="ID_olhoChar">
+                        <p>Cor do cabelo:</p>
+                        <input type="text" id="ID_cabeloChar"> 
+                    </div>
+                </div>
+            </div>
+
+            <h4>A sua história:</h4>
+
+            <div class="center">
+                <input class="story" type="text" id="ID_historiaChar">
+                <div class="sm_button_green" id="salvarFicha" onclick="salvarFicha()">
+                    <img class="icon" src="../ASSETS/ICONES/salvar.png"/>
+                </div>
+                <div class="sm_button_yellow" id="escolheAtributo" onclick="enviaPara_escolheAtributo()">
+                    <img class="icon" src="../ASSETS/ICONES/start.png"/>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+<footer>
+    <p>Projeto desenvolvido por Lucas Melo.</p>
+    <input type="button" class="button_white" value="Créditos" id="creditos">
+</footer>
+
+<script src="../JS/new_game.js"></script>
+
+</body>
+</html>

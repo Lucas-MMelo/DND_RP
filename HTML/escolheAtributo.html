@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ASSETS/ICONES/dungeons-and-dragons-icon.ico" type="image/x-icon">
+    <title>DragonCard</title> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../CSS/01_fonts.css">
+    <link rel="stylesheet" href="../CSS/escolheAtributo.css">
+    
+
+</head>
+<body>
+
+<header class="d-flex">
+    <div class="logo">
+        <img class="icon" src="../ASSETS/ICONES/dungeons-and-dragons.png" onclick="backHome()">
+        <div class="login">
+            <h3>Dragon Card</h3>
+            <div class="loguinPlayer">
+                <i class="gg-user"  id="loguinPlayer"></i>
+                <h4 class="TitlePlayer" id="ID_TitlePlayer"></h4> 
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="d-flex">
+            <input type="button" class="button_red" value="log out" onclick="showModal_logOut()">
+
+            <div class="sm_button_green" id="salvarFicha" onclick="salvarFicha()">
+                <img class="icon" src="../ASSETS/ICONES/salvar.png"/>
+            </div>
+    </nav>
+
+</header>
+
+<main>
+    
+        <div class="ficha">
+            <div class="form">
+                <p>Nome: <span class="destaque" id="ID_nameChar"></span> | </span></p>
+                <p>Idade:<span class="destaque" id="ID_idadeChar"></span> | </p>
+                <p>Altura: <span class="destaque" id="ID_alturaChar"></span> | </p>
+                <p>Peso: <span class="destaque" id="ID_pesoChar"></span> | </p>
+                <p>Pele: <span class="destaque" id="ID_peleChar"></span> | </p>
+                <p>Olho: <span class="destaque" id="ID_olhoChar"></span> | </p>
+                <p>Cabelo: <span class="destaque" id="ID_cabeloChar"></span>
+            </div>
+        </div>
+
+    <div class="container">
+
+        <div class="calculo">
+            <h2 id="ID_point"><abbr title="Pontos comprados até agora."></abbr></h2>
+        </div>
+    <div class="row">
+        <div class="col-12 col-md-6 menu_modal">
+
+            <div class="help" onclick="showModal_help()">
+                <img class="icon" src="../ASSETS/ICONES/help.png"/>
+            </div>
+
+            <table class="calculadora">
+                <h2>Atributos Físicos</h2>
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th colspan="3">Valor</th>
+                        <th colspan="2">Modificador</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><abbr title="Força">FOR</abbr></td>
+                        <td>
+                            <div class="sm_button_red" id="lessFOR" onclick="lessFOR()">
+                                <img class="icon" src="../ASSETS/ICONES/arrow_left.png">
+                            </div>                    
+                        </td>
+                        <td><p id="ID_valorFOR"></p></td>
+                        <td>
+                            <div class="sm_button_red" id="moreFOR" onclick="moreFOR()">
+                                <img  class="icon" src="../ASSETS/ICONES/arrow_right.png">
+                            </div>                    
+                        </td>
+                        <td>=</td>
+                        <td><p id="ID_modFOR"></p></td>
+                    </tr>
+
+                    <tr>
+                        <td><abbr title="Destreza">DES</abbr></td>
+                        <td>
+                            <div class="sm_button_red" id="lessDES" onclick="lessDES()">
+                                <img class="icon" src="../ASSETS/ICONES/arrow_left.png">
+                            </div>                    
+                        </td>
+                        <td><p id="ID_valorDES"></p></td>
+                        <td>
+                            <div class="sm_button_red" id="moreDES" onclick="moreDES()">
+                                <img  class="icon" src="../ASSETS/ICONES/arrow_right.png">
+                            </div>                    
+                        </td>
+                        <td>=</td>
+                        <td><p id="ID_modDES"></p></td>
+                    </tr>
+
+                    <tr>
+                        <td><abbr title="Constituição">CON</abbr></td>
+                        <td>
+                            <div class="sm_button_red" id="lessCON" onclick="lessCON()">
+                                <img class="icon" src="../ASSETS/ICONES/arrow_left.png">
+                            </div>                    
+                        </td>
+                        <td><p id="ID_valorCON"></p></td>
+                        <td>
+                            <div class="sm_button_red" id="moreCON" onclick="moreCON()">
+                                <img  class="icon" src="../ASSETS/ICONES/arrow_right.png">
+                            </div>                    
+                        </td>
+                        <td>=</td>
+                        <td><p id="ID_modCON"></p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-12 col-md-6 menu_modal">
+            <h2>Atributos Mentais</h2>
+            <table class="calculadora">
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th colspan="3">Valor</th>
+                        <th colspan="2">Modificador</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><abbr title="Inteligência">INT</abbr></td>
+                        <td>
+                            <div class="sm_button_red" id="lessINT" onclick="lessINT()">
+                                <img class="icon" src="../ASSETS/ICONES/arrow_left.png">
+                            </div>                    
+                        </td>
+                        <td><p id="ID_valorINT"></p></td>
+                        <td>
+                            <div class="sm_button_red" id="moreINT" onclick="moreINT()">
+                                <img  class="icon" src="../ASSETS/ICONES/arrow_right.png">
+                            </div>                    
+                        </td>
+                        <td>=</td>
+                        <td><p id="ID_modINT"></p></td>
+                    </tr>
+
+                    <tr>
+                        <td><abbr title="Sabedoria">SAB</abbr></td>
+                        <td>
+                            <div class="sm_button_red" id="lessSAB" onclick="lessSAB()">
+                                <img class="icon" src="../ASSETS/ICONES/arrow_left.png">
+                            </div>                    
+                        </td>
+                        <td><p id="ID_valorSAB"></p></td>
+                        <td>
+                            <div class="sm_button_red" id="moreSAB" onclick="moreSAB()">
+                                <img  class="icon" src="../ASSETS/ICONES/arrow_right.png">
+                            </div>                    
+                        </td>
+                        <td>=</td>
+                        <td><p id="ID_modSAB"></p></td>
+                    </tr>
+
+                    <tr>
+                        <td><abbr title="Carisma">CAR</abbr></td>
+                        <td>
+                            <div class="sm_button_red" id="lessCAR" onclick="lessCAR()">
+                                <img class="icon" src="../ASSETS/ICONES/arrow_left.png">
+                            </div>                    
+                        </td>
+                        <td><p id="ID_valorCAR"></p></td>
+                        <td>
+                            <div class="sm_button_red" id="moreCAR" onclick="moreCAR()">
+                                <img  class="icon" src="../ASSETS/ICONES/arrow_right.png">
+                            </div>                    
+                        </td>
+                        <td>=</td>
+                        <td><p id="ID_modCAR"></p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    
+    
+    <div class="container bg_white">
+
+        <div class="text">
+            <h3>Os Atributos:</h3>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h4>Força</h4>
+                    <p><strong>Características:</strong> Atletismo natural, poder corporal.</p>
+                    <p><strong>Importante para:</strong> Bárbaro, guerreiro e paladino.</p>
+                
+                    <h4>Constituição</h4>
+                    <p><strong>Características:</strong> Saúde, vigor, força vital.</p>
+                    <p><strong>Importante para:</strong> Todos.</p>
+                    
+                    <h4>Sabedoria</h4>
+                    <p><strong>Características:</strong> Consciência, intuição, perspicácia.</p>
+                    <p><strong>Importante para:</strong> Clérigo, druida.</p> 
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>Destreza</h4>
+                    <p><strong>Características:</strong> Agilidade física, reflexos, equilíbrio</p>
+                    <p><strong>Importante para:</strong> Ladino, monge e patrulheiro.</p>
+
+                    <h4>Inteligência</h4>
+                    <p><strong>Características:</strong> Acuidade mental, recordar informações, perícia
+                        analítica.</p>
+                    <p><strong>Importante para:</strong> Mago.</p>
+
+                    <h4>Carisma</h4>
+                    <p><strong>Características:</strong> Confiança, eloquência, liderança.</p>
+                    <p><strong>Importante para:</strong> Bardo, bruxo, feiticeiro.</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="modal" id="modal_ajuda">
+    <div class="menu_ajuda">
+        <div class="title">
+            <h2> Comprando os Atributos:</h2> 
+            <span class="exite" id="closeloguin" onclick="hiddeModal_help()">&times;</span>
+        </div>
+        <p>O método descrito aqui permite que você crie um personagem com um conjunto de valores de habilidade escolhido individualmente.</p>
+
+        <p>Você tem 27 pontos para gastar em seus valores de habilidade. O custo de cada valor de habilidade é mostrado na tabela Custo de Pontos de Habilidades. Por exemplo, um valor 14 custa 7 pontos. Usando este método, 15 será o valor de habilidade mais alto que você pode conseguir inicialmente, antes de aplicar as melhorias raciais. Você não pode ter uma habilidade menor que 8.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal_yesNo">
+    <div class="menu_modal">
+        <div class="title">
+            <h3 id="msg"></h3>
+        </div>
+        <div class="center">
+        <input type="button" class="button_white" value="Sim" id="yes">
+        <input type="button" class="button_white" value="Não" id="no">
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <p>Projeto desenvolvido por Lucas Melo.</p>
+    <input type="button" class="button_white" value="Créditos" id="creditos">
+</footer>
+
+<script src="../JS/escolheAtributo.js"></script>
+
+</body>
+</html>
